@@ -5,4 +5,4 @@ from .schema import validate_card
 
 __all__ = ["generate_card", "validate_card"]
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
