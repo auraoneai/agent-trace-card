@@ -26,6 +26,17 @@ def test_validate_example_card():
     assert validate_card(card) == []
 
 
+def test_success_and_human_intervention_examples_validate():
+    success = generate_card(load_trace(ROOT / "examples/success_trace.json"))
+    human = generate_card(load_trace(ROOT / "examples/human_intervened_trace.json"))
+    assert success["outcome"] == "passed"
+    assert success["human_intervention"] == "none recorded"
+    assert human["outcome"] == "passed"
+    assert "support lead reviewed" in human["human_intervention"]
+    assert validate_card(success) == []
+    assert validate_card(human) == []
+
+
 def test_render_markdown_html_json():
     card = generate_card(load_trace(ROOT / "examples/refund_trace.json"))
     assert "# Agent Trace Card" in render_card(card, "markdown")
