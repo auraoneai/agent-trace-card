@@ -4,24 +4,43 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agent-trace-card"
-version = "0.1.1"
-description = "Portable cards for reviewable agent traces and failures."
+version = "0.1.2"
+description = "Generate local Markdown, HTML, and JSON review cards from agent trace JSON."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
-authors = [{ name = "AuraOne" }]
+authors = [{ name = "AuraOne", email = "opensource@auraone.ai" }]
+keywords = [
+  "ai-agents",
+  "agent-evaluation",
+  "incident-review",
+  "llmops",
+  "regression-testing",
+  "traces",
+]
 classifiers = [
   "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Testing",
 ]
 dependencies = []
 
 [project.urls]
 Homepage = "https://auraone.ai/open"
 Source = "https://github.com/auraoneai/agent-trace-card"
+Issues = "https://github.com/auraoneai/agent-trace-card/issues"
+Documentation = "https://github.com/auraoneai/agent-trace-card#readme"
+Specification = "https://github.com/auraoneai/agent-trace-card/blob/main/spec/agent-trace-card-schema-v1.json"
+Changelog = "https://github.com/auraoneai/agent-trace-card/blob/main/CHANGELOG.md"
+Security = "https://github.com/auraoneai/agent-trace-card/security/policy"
 
 [project.scripts]
 agent-trace-card = "agent_trace_card.cli:main"
