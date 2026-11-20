@@ -1,16 +1,8 @@
 # agent-trace-card
 
-`agent-trace-card` turns one local agent trace JSON file into a portable review
-card for incident discussion, handoff, and regression planning.
+Generate review cards from AI agent traces in Markdown, HTML, and JSON.
 
-## At a Glance
-
-| | |
-| --- | --- |
-| Job | Summarize an agent run as Markdown, HTML, or schema-versioned JSON. |
-| Built for | Agent developers, eval engineers, incident reviewers, and governance teams. |
-| Differentiator | Small, dependency-free CLI with deterministic heuristics and a checked-in v1 schema. |
-| Produces | Goal, outcome, tools, retries, selected identifiers, failure modes, human intervention, and regression status. |
+Part of [Agent Studio Open](https://auraone.ai/open/agent-studio-open), the AuraOne MCP and A2A agent trace debugger and replay tool.
 
 ## Install
 
@@ -36,6 +28,18 @@ agent-trace-card validate /tmp/refund-agent-card.json
 The bundled refund fixture produces a valid `agent-trace-card/v1` document with
 outcome `failed` and retry count `1`. Use `--format markdown` or `--format html`
 for a shareable human-readable artifact.
+
+## At a Glance
+
+| | |
+| --- | --- |
+| Job | Summarize an agent run as Markdown, HTML, or schema-versioned JSON. |
+| Built for | Agent developers, eval engineers, incident reviewers, and governance teams. |
+| Differentiator | Small, dependency-free CLI with deterministic heuristics and a checked-in v1 schema. |
+| Produces | Goal, outcome, tools, retries, selected identifiers, failure modes, human intervention, and regression status. |
+
+`agent-trace-card` turns one local agent trace JSON file into a portable review
+card for incident discussion, handoff, and regression planning.
 
 ## What the Generator Infers
 
