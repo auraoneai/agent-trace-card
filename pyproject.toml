@@ -34,7 +34,7 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://auraone.ai/open"
+Homepage = "https://auraone.ai/open/agent-studio-open"
 Source = "https://github.com/auraoneai/agent-trace-card"
 Issues = "https://github.com/auraoneai/agent-trace-card/issues"
 Documentation = "https://github.com/auraoneai/agent-trace-card#readme"
